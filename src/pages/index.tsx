@@ -14,7 +14,7 @@ const modi = JSON.parse(JSON.stringify(text));
 export default function Home() {
   const day = ["mon", "tue", "wed", "thu", "fri", "sat"];
   return (
-    <div className="bg-orange-400 h-screen flex items-center justify-center ">
+    <div className="bg-orange-400 h-screen flex items-center justify-center overflow-y-auto">
       <div className="pt-8 bg-white px-5 rounded-3xl">
         <div className=" border-b-gray-500 border-b-2">
           <span>March 2021 🔽</span>
@@ -24,7 +24,7 @@ export default function Home() {
           <br />
           <span>Your medicines for today</span>
         </div>
-        <ul className="flex justify-evenly mt-10">
+        <ul className="grid grid-cols-6   mt-10">
           {[16, 17, 18, 19, 20, 21].map((el, i) => (
             <li
               key={el}
